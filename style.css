@@ -1,0 +1,139 @@
+/* Remove margin and padding */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: 'Heebo', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+}
+
+select{
+    padding: 1em 2em;
+    margin-top: 1em;
+    font-size: 14px;
+}
+
+header{
+    background-color: rgba(167, 255, 67, 0.808);
+    width: 100%;
+    margin-top: 0;
+}
+
+header h1{
+    padding: .5em 0.5em;
+}
+
+button{
+    padding: 1em 2em;
+    margin-bottom: 2.5em;
+    height: 5em;
+    width: 15em;
+
+}
+
+#name{
+    font-size: 2em;
+}
+
+.content{
+    max-width: 78em;
+    min-height: 26em;
+    min-width: 45em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(245, 253, 176, 0.651);
+
+}
+
+.content >* {
+    text-align: center;
+
+}
+
+.questions{
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0;
+}
+
+.questions >* {
+    margin: 1em 0;
+}
+
+/* media queries */
+@media screen and (max-width: 45.5em){
+    .content{
+        min-width: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+/* grid compatible */
+
+@supports (grid-area: auto) {
+
+    body{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .content{
+        grid-column: 2;
+        grid-row: 2;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 2fr 1fr 1fr;
+    }
+
+    header{
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+
+    .questions{
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+
+    button{
+        grid-row: 3/4;
+        grid-column: 2/3;
+        margin: 0;
+        width: auto;
+    }
+
+    h2{
+        grid-row: 4/5;
+        grid-column: 2/3;
+    }
+
+
+    /* media queries */
+    @media screen and (max-width: 45.5em){
+        .content{
+            min-width: none;
+            grid-column: 1/4;
+            grid-row: 1/4;
+        }
+    }
+
+
+}
+
+
+

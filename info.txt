@@ -1,0 +1,12 @@
+General info:
+
+This is a simple name generator website.
+The user selects a race.
+Depending on race, a name will be generated.
+Names are generated using suffixes and prefixes for each race.
+
+Tech Stack:
+
+HTML, CSS & Javascript
+CSS Grid will be used for the layout of the website.
+
